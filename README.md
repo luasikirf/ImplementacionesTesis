@@ -37,7 +37,7 @@ La función que vamos a llamar es la siguiente:
          k_max: int,x_min,x_max,nLlamadas: int,
          datos, index='cs')
   ```
-  [**Puedes ver el significado de cada parámetro en el siguiente readme**](/GuiasAlgoritmos/ACDE.md).  
+  [**Puedes ver el significado de cada parámetro en el siguiente readme**](GuiasAlgoritmos/ACDE.md).  
   Los parámetros $x_{min}$ , $x_{max}$ y $datos$ varían dependiendo el conjunto de datos, se pueden recuperar con las instrucciones de la carpeta [parámetros](/ParametrosDatos).
   
   Se realizaron 2 pruebas en la tesis, una con el parámetro $index =$'cs' y la otra con $index =$'DB', en ambos casos se usaron los siguientes parámetros:
