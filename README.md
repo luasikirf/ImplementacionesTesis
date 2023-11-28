@@ -37,7 +37,8 @@ La función que vamos a llamar es la siguiente:
          k_max: int,x_min,x_max,nLlamadas: int,
          datos, index='cs')
   ```
-  La descripción de la función de cada parámetro se encuentra en el código. Los parámetros $x_{min}$ , $x_{max}$ y $datos$ varían dependiendo el conjunto de datos. Se anexaron los valores de dichas variables en la carpeta [parámetros](/ParametrosDatos),para recuperarlos sigue las instrucciones en dicha carpeta.
+  [**Puedes ver el significado de cada parámetro en el siguiente readme**](/GuiasAlgoritmos/ACDE.md).  
+  Los parámetros $x_{min}$ , $x_{max}$ y $datos$ varían dependiendo el conjunto de datos, se pueden recuperar con las instrucciones de la carpeta [parámetros](/ParametrosDatos).
   
   Se realizaron 2 pruebas en la tesis, una con el parámetro $index =$'cs' y la otra con $index =$'DB', en ambos casos se usaron los siguientes parámetros:
    `
@@ -93,7 +94,7 @@ La función que vamos a llamar es la siguiente:
   `
   - Ejecutar ACDE en el conjunto iris.
     - Después de correr todo el código de la libreta obtenemos los parámetros $x_{min}$ , $x_{max}$ y $datos$ ejecutando en una celda nueva el siguiente código:
-        ```
+      ```
       with open(ruta/ParametrosIris.pickle, "rb") as f:
           iris_datos,iris_min,iris_max = pickle.load(f)
       ```
@@ -107,14 +108,37 @@ La función que vamos a llamar es la siguiente:
         **nota: lo anterior nos devuele un objeto, vea sus propiedades al inicio de este ejemplo**
       
   #### [SAGMDE](/SAGMDErecocido.ipynb)
-
-
-  ```
-  with open(archivo, "rb") as f:
-      datos,x_min,x_max = pickle.load(f)
-  ```
-
-
+  Tras ejecutar este código obtenemos un objeto con las siguientes propiedades:
+  * objeto.centros - Lista con los centroides de los grupos generados.
+  * objeto.costo - Puntuación obtenida en la función a minimizar.
+  * objeto.particion - Lista con el etiquetado asignado a los datos introducidos.  
+  La función que vamos a llamar es la siguiente:
+```
+recocido(datos,n_g: int ,T: float,T_f: float,T_dist: float,
+T_dist_f: float,alpha: float,alpha_dist: float,MaxIter: int,f_obj)
+```
+[**Puedes ver el significado de cada parámetro en el siguiente readme**]()  
+En este código solo debes modificar los parámetros $datos$, **n_g** y **MaxIter**, siendo **n_g** la cantidad de grupos que debe formar el algoritmo, y **MaxIter** 2 veces el tamaño del conjunto de datos, lo anterior es por recomendación de los autores del algoritmo original.
+En el trabajo de tesis utilizamos 2 funciones aptitud diferentes, en ambos casos, los parámetros que no cambian tuvieron los siguientes valores:
+`
+T = 0.0015,T_f = 0.000001 ,T_dist = 6,
+T_dist_f = 0.025,alpha = 0.98,alpha_dist = 0.985
+`
+- Ejecutar SAGMDE en el conjunto iris.
+  -  Después de correr todo el código de la libreta obtenemos el conjunto de datos Iris ya convertido al formato necesario con la siguiente celda:
+      ```
+      with open(ruta/ParametrosIris.pickle, "rb") as f:
+          iris_datos,iris_min,iris_max = pickle.load(f)
+      ```
+    
+      **nota: debemos cambiar "ruta" por la dirección donde descargamos el archivo ParametrosIris.pickle**  
+      **n_g** y **MaxIter** dependen del conjunto de datos, en este caso Iris tiene 150 datos clasificados en 3 grupos, por lo cual **n_g =3** y **MaxIter = 300**.
+  -   Llamamos a la función principal, para el ejemplo usando los mismos parámetros que en trabajo de tesis y la función costo por defecto.
+    ```
+    recocido(datos = iris_datos,n_g = 3 ,T = 0.0015,T_f = 0.000001 ,T_dist = 6,
+    T_dist_f = 0.025,alpha = 0.98,alpha_dist = 0.985,MaxIter = 300,f_obj = costo)
+    ```
+    **nota: lo anterior nos devuele un objeto, vea sus propiedades al inicio de este ejemplo**
 
 ## Replicar resultados obtenidos en la tesis.
 
