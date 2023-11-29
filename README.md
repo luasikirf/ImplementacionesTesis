@@ -38,7 +38,7 @@ La función que vamos a llamar es la siguiente:
          datos, index='cs')
   ```
   [**Puedes ver el significado de cada parámetro en el siguiente readme**](GuiasAlgoritmos/ACDE.md).  
-  Los parámetros $x_{min}$ , $x_{max}$ y $datos$ varían dependiendo el conjunto de datos, se pueden recuperar con las instrucciones de la carpeta [parámetros](/ParametrosDatos).
+  Los parámetros $x_{min}$ , $x_{max}$ y $datos$ varían dependiendo el conjunto de datos, se pueden recuperar con las instrucciones de la carpeta [parámetros](ParametrosDatos/).
   
   Se realizaron 2 pruebas en la tesis, una con el parámetro $index =$'cs' y la otra con $index =$'DB', en ambos casos se usaron los siguientes parámetros:
    `
@@ -79,7 +79,7 @@ La función que vamos a llamar es la siguiente:
   n_part: int,iter_pso: int,iter_kmean: int,c1: float ,c2: float ,datos,f_apt)
 
   ```
-  [**Puedes ver el significado de cada parámetro en el siguiente readme**]()  
+  [**Puedes ver el significado de cada parámetro en el siguiente readme**](GuiasAlgoritmos/PSO-kmeans.md)  
   Los parámetros $x_{min}$ , $x_{max}$, $datos$ y $k$ varían dependiendo el conjunto de datos. Los valores de $x_{min}$ , $x_{max}$ y $datos$ se pueden recuperar con las instrucciones de la carpeta [parámetros](/ParametrosDatos). $k$ es el número de grupos a formar, la cantidad de grupos que contienen los datos.  
   
   En el trabajo de tesis utilizamos 2 funciones aptitud diferentes, en ambos casos, los parámetros que no cambian tuvieron los siguientes valores:
