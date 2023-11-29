@@ -117,7 +117,7 @@ La función que vamos a llamar es la siguiente:
 recocido(datos,n_g: int ,T: float,T_f: float,T_dist: float,
 T_dist_f: float,alpha: float,alpha_dist: float,MaxIter: int,f_obj)
 ```
-[**Puedes ver el significado de cada parámetro en el siguiente readme**]()  
+[**Puedes ver el significado de cada parámetro en el siguiente readme**](GuiasAlgoritmos/SAGME.md)  
 En este código solo debes modificar los parámetros $datos$, **n_g** y **MaxIter**, siendo **n_g** la cantidad de grupos que debe formar el algoritmo, y **MaxIter** 2 veces el tamaño del conjunto de datos, lo anterior es por recomendación de los autores del algoritmo original.
 En el trabajo de tesis utilizamos 2 funciones aptitud diferentes, en ambos casos, los parámetros que no cambian tuvieron los siguientes valores:
 `
