@@ -140,7 +140,6 @@ T_dist_f = 0.025,alpha = 0.98,alpha_dist = 0.985
     ```
     **nota: lo anterior nos devuele un objeto, vea sus propiedades al inicio de este ejemplo**
 
-## Replicar resultados obtenidos en la tesis.
 
 
 
